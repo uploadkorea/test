@@ -8,6 +8,7 @@ module.exports = {
   siteName: 'Sapjil',
   siteDescription: '웹 사이트 제작에 필요한, 삽질을 줄일 수 있는 정보를 공유하고자 합니다.',
   siteUrl: 'https://github.com/uploadkorea/uploadkorea.github.io.git',
+  pathPrefix: '/test',
   titleTemplate: `%s | Sapjil`,
   icon: 'src/favicon.png',
   touchicon: 'src/apple-touch-icon.png',
