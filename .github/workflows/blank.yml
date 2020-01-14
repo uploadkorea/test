@@ -12,22 +12,29 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+
     - uses: actions/setup-node@v1
       with:
         node-version: '10.x'
+
     - name: Install Gridsome CLI
       shell: bash
       run: |
         sudo npm install -g "@gridsome/cli"
+
     - name: Insall npm package
       shell: bash
       run: |
         npm install
+
     - name: Build
       shell: bash
       run: |
         npm run build
+
     - name: Deploy
-      shell: bash
-      run: |
-        npm run deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCHES: gh-pages
+        FOLDER: dist
