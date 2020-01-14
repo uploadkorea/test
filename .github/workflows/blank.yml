@@ -11,9 +11,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-
-    - uses: actions/setup-node@v1
+    - name: Checkout
+      uses: actions/checkout@v1
+    
+    - name: Setup
+      uses: actions/setup-node@v1
       with:
         node-version: '10.x'
 
@@ -32,12 +34,6 @@ jobs:
       run: |
         npm run build
 
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v1
-    - uses: actions/download-artifact@v1
-    
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
