@@ -32,9 +32,15 @@ jobs:
       run: |
         npm run build
 
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/download-artifact@v1
+    
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
-        ACCESS_TOKEN: ${{ secrets.b9711bd5f830b833f59081350ce18b81789e6287 }}
+        GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BRANCHES: gh-pages
         FOLDER: dist
