@@ -27,3 +27,7 @@ jobs:
       shell: bash
       run: |
         npm run build
+    - name: Deploy
+      shell: bash
+      run: |
+        npm run deploy
