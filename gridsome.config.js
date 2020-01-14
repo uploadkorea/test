@@ -7,7 +7,7 @@
 module.exports = {
   siteName: 'Sapjil',
   siteDescription: '웹 사이트 제작에 필요한, 삽질을 줄일 수 있는 정보를 공유하고자 합니다.',
-  siteUrl: 'https://sapjil.net',
+  siteUrl: 'https://github.com/uploadkorea/uploadkorea.github.io.git',
   titleTemplate: `%s | Sapjil`,
   icon: 'src/favicon.png',
   touchicon: 'src/apple-touch-icon.png',
@@ -19,17 +19,6 @@ module.exports = {
         baseDir: 'content/posts',
         typeName: 'Post',
         path: '*.md',
-        // refs: {
-        //   author: 'Author',
-        //   tags: {
-        //     typeName: 'Tag',
-        //     create: true
-        //   },
-        //   category: {
-        //     typeName: 'Category',
-        //     create: true
-        //   }
-        // }
         remark: {
           plugins: [
             [ '@noxify/gridsome-plugin-remark-embed', {
@@ -74,17 +63,6 @@ module.exports = {
       },
     },
   ],
-  
-  // templates: {
-  //   Category: [{
-  //     path: '/category/:title',
-  //     component: 'src/templates/Category.vue'
-  //   }],
-  //   Tag: [{
-  //     path: '/tag/:title',
-  //     component: 'src/templates/Tag.vue'
-  //   }]
-  // },
   
   transformers: {
     //Add markdown support to all file-system sources
