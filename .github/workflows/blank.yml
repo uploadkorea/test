@@ -15,5 +15,13 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: '10.x'
+    - run: npm install "@gridsome/plugin-google-analytics"
+    - run: npm install "@gridsome/plugin-sitemap"
+    - run: npm install "@gridsome/remark-prismjs"
+    - run: npm install "@gridsome/source-filesystem"
+    - run: npm install "@gridsome/transformer-remark"
+    - run: npm install "@noxify/gridsome-plugin-remark-embed"
     - run: npm install "gridsome"
-    - run: npm publish
+    - run: npm install "gridsome-plugin-rss"
+    - run: npm install "vue-disqus"
+    - run: gridsome develop
