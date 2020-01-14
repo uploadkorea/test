@@ -35,8 +35,8 @@ jobs:
         npm run build
 
     - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
+      uses: maxheld83/ghpages@v0.2.1
       with:
-        GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCHES: gh-pages
         FOLDER: dist
