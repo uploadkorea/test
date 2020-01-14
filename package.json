@@ -19,5 +19,5 @@
     "vue-disqus": "^3.0.5"
   },
   "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist"
+  "deploy": "gh-pages -b master -d dist"
 }
