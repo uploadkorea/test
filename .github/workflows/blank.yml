@@ -24,7 +24,7 @@ jobs:
       run: |
         sudo npm install -g "@gridsome/cli"
 
-    - name: Insall npm package
+    - name: Install npm package
       shell: bash
       run: |
         npm install
@@ -38,6 +38,6 @@ jobs:
       uses: peaceiris/actions-gh-pages@v2
       env:
         ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        EXTERNAL_REPOSITORY: uploadkorea.github.io.git
+        EXTERNAL_REPOSITORY: uploadkorea/uploadkorea.github.io.git@master
         PUBLISH_BRANCH: master
         PUBLISH_DIR: ./dist
