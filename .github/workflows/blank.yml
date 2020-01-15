@@ -38,6 +38,5 @@ jobs:
       uses: peaceiris/actions-gh-pages@v2
       env:
         ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        EXTERNAL_REPOSITORY: uploadkorea/uploadkorea.github.io.git
-        PUBLISH_BRANCH: uploadkorea.github.io.git@master
+        PUBLISH_BRANCH: gh-pages
         PUBLISH_DIR: ./dist
