@@ -39,5 +39,5 @@ jobs:
       env:
         ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         EXTERNAL_REPOSITORY: uploadkorea/uploadkorea.github.io.git
-        PUBLISH_BRANCH: master
+        PUBLISH_BRANCH: uploadkorea.github.io.git@master
         PUBLISH_DIR: ./dist
